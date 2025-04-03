@@ -7,7 +7,7 @@ type Props = {
     onNavigate: (doctorId: string) => void;
 }
 
-export default function Doctors({doctors, endNumber, onNavigate}: Props) {
+export default function AllDoctors({doctors, endNumber, onNavigate}: Props) {
   const navigate = useNavigate();
 
   return (

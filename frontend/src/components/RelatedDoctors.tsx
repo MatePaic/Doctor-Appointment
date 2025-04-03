@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { AppContext } from "../context/AppContext"
 import { Doctor } from "../models/doctor";
-import Doctors from "./Doctors";
+import AllDoctors from "./AllDoctors";
 import { useNavigate } from "react-router-dom";
 
 type Props = {
@@ -22,7 +22,7 @@ export default function RelatedDoctors({docId, speciality}: Props) {
   }, [doctors, speciality, docId]);
 
   return (
-    <Doctors doctors={relDoc} endNumber={5} onNavigate={(doctorId) => {
+    <AllDoctors doctors={relDoc} endNumber={5} onNavigate={(doctorId) => {
         navigate(`/appointment/${doctorId}`);
         window.scrollTo(0, 0);
     }}/>

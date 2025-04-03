@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
-import Doctors from './Doctors';
+import AllDoctors from './AllDoctors';
 import { useNavigate } from 'react-router-dom';
 
 export default function TopDoctors() {
@@ -8,7 +8,7 @@ export default function TopDoctors() {
   const navigate = useNavigate();
     
   return (
-    <Doctors doctors={doctors} endNumber={10} onNavigate={(doctorId) => {
+    <AllDoctors doctors={doctors} endNumber={10} onNavigate={(doctorId) => {
       navigate(`/appointment/${doctorId}`);
     }}/>
   )
